@@ -114,6 +114,7 @@ The `cp index.html 404.html` step makes sure refreshes on routes like `/log` or 
 2. Under **Build and deployment**:
    - **Source**: GitHub Actions.
 3. Save. After the next push to `main`, the workflow will run and deploy.
+a
 
 Your site will be at:  
 `https://<username>.github.io/<repo-name>/`
@@ -129,3 +130,5 @@ Your site will be at:
 | **Auth & data** | Supabase | No change. Users and data stay in your existing Supabase project. |
 
 You are only changing where the **static site** is served; the app still connects to the same Supabase backend, so the database remains intact.
+
+remember we are not friendcycling.tech yet

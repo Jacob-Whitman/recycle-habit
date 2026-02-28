@@ -19,15 +19,13 @@ GitHub Pages serves project sites at `https://<username>.github.io/<repo-name>/`
 
 ```ts
 export default defineConfig(({ mode }) => ({
-  base: '/Friendcycling/',   // use your actual repo name, e.g. '/recycle-habit/' or '/Friendcycling/'
+  base: '/recycle-habit/',   // matches https://jacob-whitman.github.io/recycle-habit/
   server: {
     // ... rest unchanged
   },
   // ...
 }));
 ```
-
-If your repo name is different (e.g. `recycle-habit`), use that: `base: '/recycle-habit/'`.
 
 ---
 
@@ -117,7 +115,7 @@ The `cp index.html 404.html` step makes sure refreshes on routes like `/log` or 
 a
 
 Your site will be at:  
-`https://<username>.github.io/<repo-name>/`
+`https://jacob-whitman.github.io/recycle-habit/`
 
 ---
 

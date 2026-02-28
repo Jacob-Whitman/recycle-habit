@@ -132,3 +132,4 @@ Your site will be at:
 You are only changing where the **static site** is served; the app still connects to the same Supabase backend, so the database remains intact.
 
 remember we are not friendcycling.tech yet
+test 2

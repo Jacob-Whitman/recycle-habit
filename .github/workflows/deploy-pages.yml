@@ -39,6 +39,12 @@ jobs:
       - name: Fix SPA routing (404 → index)
         run: cp dist/index.html dist/404.html
 
+      - name: Ensure no custom domain (prevent redirect to friendcycling.tech)
+        run: rm -f dist/CNAME
+
+      - name: Verify build output
+        run: test -f dist/index.html || (echo "::error::Build did not produce dist/index.html" && exit 1)
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

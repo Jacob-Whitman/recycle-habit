@@ -121,6 +121,18 @@ Your site will be at:
 
 ---
 
+## 5a. Site redirects to a custom domain (e.g. friendcycling.tech)?
+
+That redirect is **not** in your code—it’s set in GitHub. To serve only at `https://jacob-whitman.github.io/recycle-habit/`:
+
+1. Repo → **Settings** → **Pages**.
+2. Under **Custom domain**, clear the domain (delete the value) or click **Remove**.
+3. Save. The github.io URL will stop redirecting after the next deploy.
+
+The workflow also removes any `CNAME` file from the build so the deployed site never re-enables a custom domain.
+
+---
+
 ## 5b. Getting a 404?
 
 - **URL path = repo name.** The address is always `https://<username>.github.io/<repo-name>/`. If your repo is `FriendCycling`, use `.../FriendCycling/`; if it’s `recycle-habit`, use `.../recycle-habit/`. There is no site at `.../recycle-habit/` if the repo is named something else.

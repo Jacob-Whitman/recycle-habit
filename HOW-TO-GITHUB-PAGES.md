@@ -112,7 +112,8 @@ The `cp index.html 404.html` step makes sure refreshes on routes like `/log` or 
 2. Under **Build and deployment**:
    - **Source**: GitHub Actions.
 3. Save. After the next push to `main`, the workflow will run and deploy.
-a
+
+The workflow’s deploy job uses the **github-pages** environment (repo **Settings** → **Environments**). GitHub creates this environment automatically when you use GitHub Actions for Pages; it’s separate from branch-based environments.
 
 Your site will be at:  
 `https://jacob-whitman.github.io/recycle-habit/`

@@ -130,6 +130,3 @@ Your site will be at:
 | **Auth & data** | Supabase | No change. Users and data stay in your existing Supabase project. |
 
 You are only changing where the **static site** is served; the app still connects to the same Supabase backend, so the database remains intact.
-
-remember we are not friendcycling.tech yet
-test 2

@@ -116,7 +116,18 @@ The `cp index.html 404.html` step makes sure refreshes on routes like `/log` or 
 The workflow’s deploy job uses the **github-pages** environment (repo **Settings** → **Environments**). GitHub creates this environment automatically when you use GitHub Actions for Pages; it’s separate from branch-based environments.
 
 Your site will be at:  
-`https://jacob-whitman.github.io/recycle-habit/`
+`https://<username>.github.io/<repo-name>/`  
+(e.g. `https://jacob-whitman.github.io/recycle-habit/` if the repo is named `recycle-habit`).
+
+---
+
+## 5b. Getting a 404?
+
+- **URL path = repo name.** The address is always `https://<username>.github.io/<repo-name>/`. If your repo is `FriendCycling`, use `.../FriendCycling/`; if it’s `recycle-habit`, use `.../recycle-habit/`. There is no site at `.../recycle-habit/` if the repo is named something else.
+- **Pages source:** Settings → Pages → Build and deployment → **Source** must be **GitHub Actions**.
+- **Workflow branch:** The workflow runs on push to `main` or `master`. If your default branch is different, either push to `main`/`master` or change `branches:` in the workflow.
+- **Actions tab:** Check that the “Deploy to GitHub Pages” workflow runs and that both the **build** and **deploy** jobs succeed. If the build fails (e.g. missing `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` secrets), no artifact is deployed and the site will 404.
+- **`base` in vite.config.ts:** Must match your repo name (e.g. `base: '/FriendCycling/'` or `base: '/recycle-habit/'`). Mismatch causes broken assets or blank pages.
 
 ---
 
